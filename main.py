@@ -217,7 +217,7 @@ def game_loop():
 
         desenha_fundo(fundo1)
 
-        print('{}'.format(bala1.dano_maximo))
+        print('{}'.format(barra1.amplitude))
         
         if jogador1.Perdeu or jogador2.Perdeu:
             tela_final(jogador1, jogador2)

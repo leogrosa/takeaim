@@ -14,7 +14,6 @@ class barraforca():
 
         self.color_out = black
         self.color_in = orange
-
         self.subindo = True
 
     def draw(self, jogador):
@@ -23,12 +22,12 @@ class barraforca():
         if jogador.orientacao:
             self.x = jogador.x - 30
     
-            pygame.draw.rect(gameDisplay,self.color_in,[self.x, self.y + self.h, self.w, self.amplitude] )
+            pygame.draw.rect(gameDisplay,self.color_in,(self.x, self.y + self.h + self.amplitude, self.w, -self.amplitude),0)
             pygame.draw.rect(gameDisplay, self.color_out, [self.x, self.y, self.w, self.h], 2)
         else:
             self.x = jogador.x + jogador.w + 30 - self.w
             
-            pygame.draw.rect(gameDisplay,self.color_in,[self.x, self.y + self.h, self.w, self.amplitude] )
+            pygame.draw.rect(gameDisplay,self.color_in,(self.x, self.y + self.h + self.amplitude, self.w, -self.amplitude),0)
             pygame.draw.rect(gameDisplay, self.color_out, [self.x, self.y, self.w, self.h], 2)
 
     def movimentar(self):
